@@ -1,21 +1,33 @@
 import React from 'react';
 import './signup-card.scss';
+import Cat from '../icons/Cat.js';
+import Saturn from '../icons/Saturn.js';
+
 const SignupCard = (props) => {
 return (
-    <aside>
-      <header> I am learning 
-        <div>French</div>
-      </header>
-      <div className="signup__form">
-        <label htmlFor="name">
-          <input type="text" /> Name </label>
-        <label htmlFor="email">
-          <input type="email"/> Email </label>
-        <label htmlFor="name">
-          <input type="password" /> Password </label>
-        <button>Submit</button>
+    <div className="card__wrap">
+      <div className="card__logo-container">
+        <Saturn className="card__logo-saturn" />
+        <div className="card__logo-text"> 
+          <Cat className="card__logo-cat"/>
+          <span> Saturnian </span>
+        </div> 
       </div>
-    </aside>
+      <div className="signup__form">
+        <label htmlFor="name"> 
+          <div> Username </div>
+          <input type="text" id="name" />  
+        </label>
+        <label htmlFor="password"> 
+          <div> Password </div>
+          <input type="password" id="password" />  
+        </label>
+         <div className="signup__form-buttons"> 
+            <button>Sign In</button>
+            <button>Sign Up</button>
+         </div>
+      </div>
+    </div>
   );
 };
 

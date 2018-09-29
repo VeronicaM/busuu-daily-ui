@@ -6,9 +6,11 @@ import './App.scss';
 
 class App extends Component {
     render() {
-        return ( <div className="center" >
+        return ( <div className="main" >
             <NavBar />
-            <SignupCard />
+            <div className="main__wrap">
+            	<SignupCard />
+            </div>
             </div>
         );
     }

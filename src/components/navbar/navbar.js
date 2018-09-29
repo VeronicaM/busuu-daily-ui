@@ -1,20 +1,25 @@
 import React from 'react';
 import './navbar.scss';
-import logo from '../../assets/logo.png';
-
+import HamburgerMenu from '../icons/HamburgerMenu.js';
+import Home from '../icons/Home.js';
 const NavBar = (props) => {
-return ( 
-    <nav className="signup__nav" >
-        <div className="singup__logo-container" >
-            <img className="signup__logo" src={logo} alt="logo" />
-            <span> LangPirate </span> 
-        </div>
-        <div className= "signup__links">
-            <a href = "" > Home </a>  
-            <a href = "" > Courses </a>  
-            <a href = "" > Resources </a>  
-            <div className = "singup__lang-dropdown"> </div>  
-        </div> 
-    </nav>)
+    const links = <fragment>
+        <a href = "" > Signup </a>
+        <a href = "" > Activity Feed </a>  
+        <a href = "" > Notifications </a>
+    </fragment>;
+    return ( 
+        <nav className="signup__nav" >
+            <Home className="signup__nav-home"/>
+             <div className="signup__nav--responsive">
+                 <HamburgerMenu className="nav__hamburger" />
+                <div className= "signup__links--responsive">
+                    {links}
+                </div>
+             </div>
+             <div className= "signup__links">
+                {links}
+            </div> 
+        </nav>)
 };
 export default NavBar;

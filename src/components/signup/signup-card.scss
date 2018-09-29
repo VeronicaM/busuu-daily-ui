@@ -1,0 +1,142 @@
+@import '../../colors.scss';
+
+.card__logo-text {
+	letter-spacing: 20px;
+	text-transform: uppercase;
+	color: $color-light;
+}
+.card__wrap {
+	display: flex;
+	justify-content: space-between;
+	max-width: 80%;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	box-shadow: inset #1c1c22 10px 0 121px -17px, black -7px 1px 20px -4px;
+}
+.card__logo-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	box-sizing: border-box;
+	background-color: $color-secondary-dark;
+	border-radius: 5% 0 0 5%;
+	flex: 1 2 auto;
+}
+.card__logo-saturn {
+	width: 60%;
+	height: 60%;
+	animation: color 1s forwards, fade-in-grow 1s;
+}
+.card__logo-text {
+	opacity: 0;
+	animation: fade-in-grow 1s 0.4s forwards;
+}
+.card__logo-cat {
+	position: absolute;	
+	width: 30%;
+	heigth: 30%;
+    bottom: 5%;
+    z-index: 1;
+    opacity: 0;
+    animation: fade-in 1s 1s ease-in forwards;
+}
+.signup__form {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+    color: $color-light;
+    background-color: #5d979b;
+    padding: 30px;
+}
+.signup__form input,
+.signup__form button {
+	color: $color-light;
+	background-color: transparent;
+    font-size: 15px;
+}
+.signup__form button {
+	padding: 5px 20px;
+	border: solid 1px;
+	border-radius: 5px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color-light;
+		color: $color-secondary-dark;
+	}
+}
+.signup__form button:not(:last-child) {
+	margin-right: 25px;
+}
+.signup__form input {
+	outline: none;
+	border: none;
+	padding: 0 5px;
+    border-bottom: solid 1px $color-light;
+}
+.signup__form > * { 
+	margin-bottom: 20px;
+}
+.signup__form label div {
+	margin-bottom: 10px;
+}
+.signup__form-buttons {
+	margin-bottom: 0;
+}
+
+@keyframes fade-in {
+	100% {
+		opacity: 1;
+		fill: $color-light;
+	}
+}
+
+@keyframes color {
+	0%, 70% {
+		fill: $color-quaternary-light;
+	}
+	100% {
+		fill: $color-quaternary-dark;
+	}
+}
+
+@keyframes fade-in-grow {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@media only screen and (max-width: 660px) {
+	.card__logo-text {
+		letter-spacing: 15px;
+	}
+
+	.signup__form {
+		padding: 30px 10px;
+	}
+}
+@media only screen and  (min-width:660px) and (max-width:695px) {
+	.card__logo-text {
+		letter-spacing: 15px;
+	}
+}
+@media only screen and (max-width: 572px) {
+	.signup__form {
+		order: -1
+	}
+}
+
+@media only screen and (max-width: 300px)  {
+	.card__wrap {
+		margin-left: 5px;
+	}
+}

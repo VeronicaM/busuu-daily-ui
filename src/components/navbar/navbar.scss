@@ -1,5 +1,4 @@
-/* Colors */
-$navbar-color: #2f3945;
+@import '../../colors.scss';
 
 .signup__nav {
   background-color: $navbar-color;
@@ -7,22 +6,53 @@ $navbar-color: #2f3945;
   display: flex;
   justify-content: space-between;
   padding: 10px 20px; 
+  position: sticky;
+  top:0;
 }
-
-.signup__links a {
-  color: white;
+.signup__nav--responsive {
+  display: none;
+}
+nav a {
   padding: 0 10px; 
   vertical-align: baseline;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
-
-.signup__links ,
-.singup__logo-container {
+.signup__links  {
 	display: flex;
 	align-items: center;
 }
-.signup__logo {
-	width: 50px;
-	height: 40px;	
-	flex: 0 0 auto;
-	padding-right: 10px;
+.signup__links a {
+   color: white;
+}
+.signup__nav-home,
+.nav__hamburger {
+  width: 30px;
+  height: 30px;
+  fill: white;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+@media only screen and (max-width: 600px)  {
+  .signup__links {
+    display: none;
+  }
+  .signup__nav--responsive {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      overflow: inherit;
+    }
+  }
+  .signup__links--responsive {
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    background-color: white;
+    padding: 10px;
+  }
 }
