@@ -5,7 +5,7 @@ import Home from '../icons/Home.js';
 
 import {Link} from 'react-router-dom'
 
-const NavBar = (props) => {
+const Navbar = (props) => {
 
     const links = <div>
         <Link to="/activity-feed"> Activity Feed </Link>
@@ -26,4 +26,4 @@ const NavBar = (props) => {
             </div> 
         </nav>);
 };
-export default NavBar;
+export default Navbar;

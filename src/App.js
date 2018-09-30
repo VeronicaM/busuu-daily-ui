@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import NavBar from './components/navbar/Navbar.js';
+import Navbar from './components/navbar/Navbar.js';
 import SignupCard from './components/signup/SignupCard.js';
 import ActivityFeed from './components/activity-feed/ActivityFeed.js';
 
