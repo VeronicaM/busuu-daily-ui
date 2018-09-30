@@ -64,7 +64,7 @@ class App extends Component {
 
         return ( <Router>
 	    		<div className="main" >
-	    			<NavBar className={isTransparentClass}/>
+	    			<Navbar className={isTransparentClass}/>
 	    			<div className="banner"> 
 	    				<h1 className=""> Your Travel Adventures </h1>
 	    			 </div>
