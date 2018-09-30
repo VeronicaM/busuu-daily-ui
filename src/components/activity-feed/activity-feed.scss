@@ -1,0 +1,73 @@
+@import '../../colors.scss';
+
+.af__wraper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;;
+	margin-bottom: 10px;
+}
+.af__posts {
+	width: 60%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.af__post {
+	width: 50%;
+	min-height: 250px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+	color: $color-light;	
+}
+.af__post a {
+	text-decoration: none;
+	color: inherit;
+	&:hover {
+		text-decoration: underline;
+	}
+}
+.af__post footer {
+	display: block;
+	box-sizing: border-box;
+	background-color: rgba(0,0,0, 0.3);
+	position: absolute;
+	bottom: 0;
+    width: 100%;
+    padding: 10px 20px;
+}
+.af__post-title {
+	font-size: 20px;
+	font-family: 'Open Sans', sans-serif;
+	margin-bottom: 5px;
+	font-weight: 500;
+}
+.af__post-subtitle {
+	font-size: 14px;
+}
+.comment-icon {
+	fill: $color-light;
+	height: 11px;
+	width: 11px;
+    padding-left: 10px;
+}
+// .comment-icon:hover,
+// .heart-icon:hover {
+// 	cursor: pointer;
+// }
+.af__post-actions {
+	font-size: 12px;
+	text-align: right;
+}
+
+@media only screen and (max-width: 1020px){
+	.af__post {
+		width: 100%;
+		background-position: 0;
+	}
+}
+
+@media only screen and (max-width: 500px){
+	.af__posts {
+	    width: 90%;
+	}
+}

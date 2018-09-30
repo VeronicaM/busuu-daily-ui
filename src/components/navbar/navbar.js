@@ -2,16 +2,20 @@ import React from 'react';
 import './navbar.scss';
 import HamburgerMenu from '../icons/HamburgerMenu.js';
 import Home from '../icons/Home.js';
+
+import {Link} from 'react-router-dom'
+
 const NavBar = (props) => {
-    const links = <fragment>
-        <a href = "" > Signup </a>
-        <a href = "" > Activity Feed </a>  
-        <a href = "" > Notifications </a>
-    </fragment>;
+
+    const links = <div>
+        <Link to="/activity-feed"> Activity Feed </Link>
+        <Link to="/notifications"> Notifications </Link>
+    </ div>;
+
     return ( 
-        <nav className="signup__nav" >
-            <Home className="signup__nav-home"/>
-             <div className="signup__nav--responsive">
+        <nav className={'signup__nav '+ props.className} >
+            <Link to="/"><Home className="signup__nav-home"/> </Link>
+            <div className="signup__nav--responsive">
                  <HamburgerMenu className="nav__hamburger" />
                 <div className= "signup__links--responsive">
                     {links}
@@ -20,6 +24,6 @@ const NavBar = (props) => {
              <div className= "signup__links">
                 {links}
             </div> 
-        </nav>)
+        </nav>);
 };
 export default NavBar;

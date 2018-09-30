@@ -8,6 +8,11 @@
   padding: 10px 20px; 
   position: sticky;
   top:0;
+  left: 0;
+  z-index: 9999;
+}
+.navbar--transparent {
+  background-color: transparent;
 }
 .signup__nav--responsive {
   display: none;

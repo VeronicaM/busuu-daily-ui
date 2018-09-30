@@ -1,8 +1,32 @@
-.main {
-	overflow-y: auto;
-	overflow-x: hidden;
-}
+@import './colors.scss';
+
 .main__wrap {
-	margin-top: 20px;
+	margin: 20px 0;
 	height: 100%;
+}
+.main__wrap--with-baner {
+	padding-top: 180px;
+}
+.banner {
+  background-image: url('/assets/atlas-close-up-dark.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 230px;
+  background-attachment: fixed;
+  background-position: 0 -55px;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-light;
+  font-family: 'Open Sans', sans-serif;
+  text-shadow: -2px 5px 4px black;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 1020px){
+	.banner {
+		background-position: 80% -55px;
+	}
 }
