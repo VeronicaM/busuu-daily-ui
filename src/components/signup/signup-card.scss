@@ -133,6 +133,10 @@
 	.signup__form {
 		order: -1
 	}
+	.card__wrap,
+	.card__logo-container {
+		border-radius: 0 0 3% 3%;
+	}
 }
 
 @media only screen and (max-width: 300px)  {

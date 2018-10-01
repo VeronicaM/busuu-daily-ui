@@ -72,5 +72,70 @@
       "img": "camera-eyeglasses-eyewear.jpg",
       "link": "http://blog.world-mysteries.com/"
     }
-  ]
+  ],
+  "notifications": {"today":[{
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "comment",
+      "timestamp": "20 min ago",
+      "author": "Alexandra Riviere"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "like",
+      "timestamp": "20 min ago",
+      "author": "Jean-Baptiste"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "follower",
+      "timestamp": "20 min ago",
+      "author": "Benjamin Benoist"
+    },{
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "comment",
+      "timestamp": "20 min ago",
+      "author": "Katy Wilderam"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "like",
+      "timestamp": "20 min ago",
+      "author": "Alexandra Riviere"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "follower",
+      "timestamp": "20 min ago",
+      "author": "Alexandra Riviere"
+    }
+  ], 
+  "yesterday": [
+   {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "comment",
+      "timestamp": "20 min ago",
+      "author": "Katy Wilderam"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "like",
+      "timestamp": "20 min ago",
+      "author": "Alexandra Riviere"
+    },
+    {
+      "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      "subtitle": "Praesent finibus justo urna",
+      "type": "follower",
+      "timestamp": "20 min ago",
+      "author": "Alexandra Riviere"
+    }
+  ]}
 }

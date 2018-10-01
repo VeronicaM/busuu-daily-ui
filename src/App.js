@@ -17,13 +17,16 @@ class App extends Component {
 		};
 		this.handleScroll = this.handleScroll.bind(this);
 		this.onRouteChanged = null;
+		this.showBanner = window.location.pathname !== '/'; 
 	}
 
 	componentDidMount() {
 		window.addEventListener('scroll', this.handleScroll);
 		this.onRouteChanged = this.props.history.listen((location, action) => {
-			console.log("on route change");
+			this.showBanner = location.pathname !== '/'; 
+			console.log(this.showBanner);
 		});
+
 	};
 
 	componentWillUnmount() {
@@ -42,14 +45,15 @@ class App extends Component {
 
 	render() {
 		const isTransparentClass = this.state.setTransparent && 'navbar--transparent';
+		const hasBannerClass = this.showBanner ? 'main__wrap--with-banner': '';
 
 		return (
 			<div className="main" >
 				<Navbar className={isTransparentClass} />
-				<div className="banner">
+				{hasBannerClass && <div className="banner">
 					<h1 className="banner__title"> Your Travelling Adventures </h1>
-				</div>
-				<div className="main__wrap main__wrap--with-banner">
+				</div>}
+				<div className={"main__wrap "+ hasBannerClass}>
 					{this.props.children}
 				</div>
 			</div>

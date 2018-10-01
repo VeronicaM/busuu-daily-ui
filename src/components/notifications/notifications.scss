@@ -1,0 +1,57 @@
+@import '../../colors.scss';
+
+.notifications__wraper {
+	display: flex;
+	flex-direction: column;
+	width: 80%;
+	margin: 0 auto;
+}
+.notifications__item {
+	background-color: white;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	border-bottom: solid 0.6px #AEB5BC;
+	padding: 10px;
+}
+.notifications__header {
+	text-transform: uppercase;
+	font-weight: 500;
+	text-align: center;
+	line-height: 2.5;
+	font-size: 18px;
+	background-color: $color-dark;
+	color: #AEB5BC;
+	font-family: 'Open Sans', sans-serif;
+}
+.notification__type {
+	order: -1;
+	padding: 20px;
+	padding-left: 10px;	
+}
+.notification__type svg {
+	width: 20px;
+	height: 20px;
+	fill: $color-quaternary-dark;
+}
+.notification__timestamp {
+	color: #A8B0B7;
+	font-size: 14px;
+}
+.notification__title {
+	margin-bottom: 3px;
+}
+
+@media only screen and (max-width: 500px){
+	.notifications__item,
+	.notification__timestamp,
+	.notifications__header {
+	   font-size: smaller;
+	}
+
+	.notification__type svg {
+		width: 15px;
+		height: 15px;
+	}
+
+}
