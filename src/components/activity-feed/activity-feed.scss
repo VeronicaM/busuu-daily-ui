@@ -64,6 +64,12 @@
 		width: 100%;
 		background-position: 0;
 	}
+	.af__post a {
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 }
 
 @media only screen and (max-width: 500px){

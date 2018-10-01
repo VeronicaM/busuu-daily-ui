@@ -17,6 +17,10 @@
 .signup__nav--responsive {
   display: none;
 }
+.signup__nav--responsive a {
+  line-height: 1.5;
+  color: $color-quaternary-dark;
+}
 nav a {
   padding: 0 10px; 
   vertical-align: baseline;

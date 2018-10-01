@@ -4,7 +4,7 @@
 	margin: 20px 0;
 	height: 100%;
 }
-.main__wrap--with-baner {
+.main__wrap--with-banner {
 	padding-top: 180px;
 }
 .banner {
@@ -29,5 +29,8 @@
 @media only screen and (max-width: 1020px){
 	.banner {
 		background-position: 80% -55px;
-	}
+  }
+  .banner__title {
+    font-size: 28px;
+  }
 }

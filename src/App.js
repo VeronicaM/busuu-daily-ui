@@ -1,80 +1,60 @@
 import React, { Component } from 'react';
 import Navbar from './components/navbar/Navbar.js';
-import SignupCard from './components/signup/SignupCard.js';
-import ActivityFeed from './components/activity-feed/ActivityFeed.js';
-
-import {
-  BrowserRouter as Router,
-  Route,
-  Link,
-  Switch,
-  withRouter
-} from 'react-router-dom';
 
 import './App.scss';
+import {
+	withRouter
+} from 'react-router-dom';
 
 const HEADER_HEIGHT = 200;
 
 class App extends Component {
 	constructor(props) {
-	  super(props);
+		super(props);
 
-	  this.state = {
-	  	setTransparent: true
-	  };
-	  this.handleScroll = this.handleScroll.bind(this);
+		this.state = {
+			setTransparent: true
+		};
+		this.handleScroll = this.handleScroll.bind(this);
+		this.onRouteChanged = null;
 	}
 
 	componentDidMount() {
-	  window.addEventListener('scroll', this.handleScroll);
-	};
-
-	componentWillUpdate() {
-	  console.log('test update');
+		window.addEventListener('scroll', this.handleScroll);
+		this.onRouteChanged = this.props.history.listen((location, action) => {
+			console.log("on route change");
+		});
 	};
 
 	componentWillUnmount() {
-	  window.removeEventListener('scroll', this.handleScroll);
+		window.removeEventListener('scroll', this.handleScroll);
+		this.onRouteChanged();
 	};
 
 	handleScroll(event) {
-		
-		if(window.scrollY < HEADER_HEIGHT){
-			this.setState({setTransparent: true});
+
+		if (window.scrollY < HEADER_HEIGHT) {
+			this.setState({ setTransparent: true });
 		} else {
-			this.setState({setTransparent: false});
-		} 
+			this.setState({ setTransparent: false });
+		}
 	};
 
-    render() {
-    	const isTransparentClass = this.state.setTransparent && 'navbar--transparent';
+	render() {
+		const isTransparentClass = this.state.setTransparent && 'navbar--transparent';
 
-    	const routes = <Switch> 
-    		<Route exact={true} path="/" component={SignupCard} />
-			<Route path="/activity-feed" component={ActivityFeed}/>  
-			<Route path="/notifications" render={() => {
-			 	return (
-		          <div className="jumbotron">
-		            <h1 className="display-3">Hello, world!</h1>
-		          </div>
-		         );
-		 }} />
-		 	 <Route path="*" component={SignupCard} />
-		 </Switch>;
-
-        return ( <Router>
-	    		<div className="main" >
-	    			<Navbar className={isTransparentClass}/>
-	    			<div className="banner"> 
-	    				<h1 className=""> Your Travel Adventures </h1>
-	    			 </div>
-		        	<div className="main__wrap main__wrap--with-baner">
-		        		{routes}
-		        	</div>
-	         	</div>
-        	</Router>
-        );
-    }
+		return (
+			<div className="main" >
+				<Navbar className={isTransparentClass} />
+				<div className="banner">
+					<h1 className="banner__title"> Your Travelling Adventures </h1>
+				</div>
+				<div className="main__wrap main__wrap--with-banner">
+					{this.props.children}
+				</div>
+			</div>
+		);
+	}
 }
 
-export default App;
+export default withRouter(App);
